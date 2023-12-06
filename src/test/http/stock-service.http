@@ -1,0 +1,42 @@
+### List Items
+GRPC localhost:{{port}}/item.ItemGrpc/ListItems
+
+### Get Item details
+GRPC localhost:{{port}}/item.ItemGrpc/GetItemDetails
+
+{
+  "id": {{id}}
+}
+
+### Create Item
+GRPC localhost:{{port}}/item.ItemGrpc/CreateItem
+
+{
+  "id": {{$random.uuid}},
+  "max_stock": "100",
+  "min_stock": "0"
+}
+
+### Update Item
+GRPC localhost:{{port}}/item.ItemGrpc/UpdateItem
+
+{
+  "id": {{id}},
+  "max_stock": "90",
+  "min_stock": "1"
+}
+
+### Update Item Stock
+GRPC localhost:{{port}}/item.ItemGrpc/IncrementItemStock
+
+{
+  "id": {{id}},
+  "quantity": "10"
+}
+
+### Delete Item
+GRPC localhost:{{port}}/item.ItemGrpc/DeleteItem
+
+{
+  "id": {{id}}
+}
